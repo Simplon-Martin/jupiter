@@ -1,0 +1,38 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div style="text-align: center" class="predict-content">
+                    <h1>Selon nos éstimations votre bien vaut : </h1>
+                    <p style="font-size: 35px;  background-color: #0f056b09">{{ prediction }} $</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Votre Secteur : </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div style="text-align: center" class="view-map-content">
+                    <iframe
+                      width="600"
+                      height="450"
+                      style="border:0"
+                      loading="lazy"
+                      allowfullscreen
+                      src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDstWgA2pIh8wutGWQ35pVzE7Pc5cl6yCU&center={{latitude}},{{longitude}}&zoom=16&maptype=roadmap">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

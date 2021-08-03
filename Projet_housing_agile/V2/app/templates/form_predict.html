@@ -1,0 +1,47 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Predict{% endblock %}
+{% block body %}
+
+<div class="section-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="wrapper-form">
+                    <div class="content-section">
+                        <div class="center">
+                            <h5>Veuillez remplir les champs ci-dessous :</h5>
+                            <br/>
+                            <form action="{{url_for('predict')}}" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Adresse</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="n° et nom de rue, code postal, ville">
+                                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nombre de pièces</label>
+                                    <input type="text" class="form-control" id="rooms" name="rooms" placeholder="Nombre entier">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nombre de chambres</label>
+                                    <input type="text" class="form-control" id="bedrooms" name="bedrooms" placeholder="Nombre entier">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Votre revenu annuel</label>
+                                    <input type="text" class="form-control" id="income" name="income" placeholder="en k$">
+                                </div>
+                                <button type="submit" class="button button--ujarak button--border-thin button--text-thick">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="img-content">
+                    <img src="../static/img/californie-predict.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

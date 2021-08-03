@@ -1,0 +1,42 @@
+﻿
+-- Database: housing
+
+-- DROP DATABASE housing;
+
+CREATE DATABASE housing
+    WITH 
+    OWNER = user
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'fr_FR.UTF-8'
+    LC_CTYPE = 'fr_FR.UTF-8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+
+-- Table: csv_housing
+
+-- DROP TABLE public.csv_housing;
+
+CREATE TABLE IF NOT EXISTS public.csv_housing
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+	PRIMARY KEY (id),
+    longitude numeric(8,2) NOT NULL,
+    latitude numeric(8,2) NOT NULL,
+    housing_median_age numeric(8,2) NOT NULL,
+    total_rooms numeric(8,2) NOT NULL,
+    total_bedrooms numeric(8,2) NOT NULL,
+    population numeric(8,2) NOT NULL,
+    households numeric(8,2) NOT NULL,
+    median_income numeric(8,4) NOT NULL,
+    median_house_value numeric(8,2) NOT NULL,
+    ocean_proximity character varying(50) COLLATE pg_catalog."default"
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.csv_housing
+    OWNER to user;

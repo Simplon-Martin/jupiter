@@ -1,0 +1,98 @@
+<!-- app/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }} Estimaison</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!--Path to Popper - it is for dropsdowns etc in bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='img/favicon-estimaison.png')}}" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="/">Estimaison</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-righ">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('form_predict') }}">Predict<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('dashboard') }}">DashBoard<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Predict</a>
+                        <a class="dropdown-item" href="#">Team</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron pt-6">
+        <div class="wrapper-text-home">
+            <div class="content-text">
+                <!--<h1 class="display-4">Estimaison</h1>-->
+                <h1 class="text"></h1>
+              <p class="lead">Notre solution IA</p>
+              <hr class="my-4" style="visibility:hidden;">
+            </div>
+        </div>
+    </div>
+
+      {% block body %}
+      {% endblock %}
+    <div class="push"></div>
+
+    <footer class="bg-dark text-center text-white">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                  <!-- Github -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+              </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-white" href="#">Estimaison</a>
+          </div>
+          <!-- Copyright -->
+    </footer>
+</body>
+</html>

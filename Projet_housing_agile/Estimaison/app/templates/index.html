@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<title>Estimaison</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+	<div align="middle">
+		<img src="{{url_for('static', filename='img/logo_estimaison.png')}}">
+	</div>
+	
+    <h1 align="middle">Outils d'estimation de bien immobilier</h1>
+
+	<h2 align="middle">Veuillez renseigner les champs suivant concernant votre :</h2>
+
+	<div align="left">
+		<form action="{{url_for('predict')}}" method="post">
+			<div class="form-group">
+			<label for="exampleInputEmail1">Adresse</label>
+			<input type="text" class="form-control" id="address" name="address" placeholder="n° et nom de rue, code postal, ville">
+			<!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+			</div>
+			<div class="form-group">
+			<label for="exampleInputPassword1">Nombre de pièces</label>
+			<input type="text" class="form-control" id="rooms" name="rooms" placeholder="Nombre entier">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Nombre de chambres</label>
+				<input type="text" class="form-control" id="bedrooms" name="bedrooms" placeholder="Nombre entier">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Votre revenu annuel</label>
+				<input type="text" class="form-control" id="income" name="income" placeholder="en $">
+			</div>
+			<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me out</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<div>
+		<a href="{{url_for('dashboard')}}"> Graph </a>
+	</div>
+	
+	<footer> 
+		<div align="middle">
+			<br><br>Footer
+		</div>
+	</footer> 
+
+</body>
+</html>
+

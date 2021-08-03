@@ -1,0 +1,554 @@
+/* app/static/css/style.css */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100')
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.h1, h1{
+    font-size: 65px;
+}
+h1{
+    font-family: 'Spectral', serif;
+}
+
+body, h2, h3, p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+li{display:inline-block;min-width:50px;}
+li a {
+    text-decoration:none;
+    line-height: 50px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #444444;
+}
+
+li a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+li a:hover:after {
+  width: 90%;
+  background: white;
+}
+
+.bg-light{
+    background-color:#0f056b!important;
+    transition: opacity: 0.42;
+}
+
+.navbar.scrolled {
+    background: #0f056b;
+    opacity: 0.53;
+}
+
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar-light.navbar-nav.nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-brand{
+    color:white;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: #2C3E50;
+}
+
+a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+  color: #DC7633;
+}
+
+a.navbar-brand.topnav {
+    font-size: 22px;
+}
+
+.lead {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.navbar.navbar-expand-lg.navbar-light.fixed-top.scrolled{
+    height: 50px;
+}
+
+footer {
+    background-color: #f8f8f8;
+}
+
+.bg-dark {
+    background-color: #0f056b!important;
+    opacity: 0.8
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+.alert-info {
+    width: 50%;
+    margin: auto;
+    color: #687430;
+    background-color: #e6ecca;
+    border-color: #aec251;
+}
+
+.btn-default {
+    border-color: #aec251;
+    color: #aec251;
+}
+
+.btn-default:hover {
+    background-color: #aec251;
+}
+
+.wrapper_button{
+    position: relative;
+}
+
+.estimer-button {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    bottom: 125px;
+    left: 0;
+    width: 100%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.content-section {
+    padding: 50px 0;
+   /* border-top: 1px solid #e7e7e7; */
+}
+
+.footer, .push {
+  clear: both;
+  height: 4em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 3px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.topnav {
+    font-size: 14px;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.section-1{
+    margin-top:35px;
+    height: 450px;
+    margin-bottom:100px;
+}
+
+.section-1 p {
+    font-size: 18px;
+}
+
+.section-1 .block-text {
+    height: 200px;
+}
+
+.wrapper-logo{
+    text-align:center;
+}
+
+.block-text{
+    margin:35px;
+}
+
+/*************** ajout header ********************/
+
+
+.collapse.navbar-collapse{
+    margin-right: 25px;
+}
+
+.wrapper-text-home{
+    position: relative;
+    padding-bottom: 50px;
+    height: 100%;
+}
+
+.content-text{
+    text-align: center;
+    position: relative;
+    bottom: -150px;
+}
+
+.jumbotron {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/citybackground.jpg");
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 50%, #161616 100%), url("../img/citybackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100%;
+}
+
+.jumbotron.pt-6{
+    height: 580px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+}
+
+
+.estimer-button {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    bottom: 125px;
+    left: 0;
+    width: 100%;
+}
+
+/****************************/
+/*
+.box {
+  display: block;
+  background-color: transparent;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+*/
+/****************** body home ****************/
+
+.logo-argent svg, .logo-graphique svg, .logo-team svg {
+    color: #0f056b;
+    opacity: 0.8
+}
+
+.logo-team svg {
+    position: relative;
+    top: 20px;
+}
+
+/**************** button Home ********************/
+
+
+
+
+
+
+/* Top Navigation Style */
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 1.25em;
+	text-align: center;
+}
+.codrops-links::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: #BFCACF;
+	content: '';
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
+.codrops-icon {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0em 0;
+	width: 1.5em;
+	text-decoration: none;
+}
+.codrops-icon:before {
+	margin: 0 5px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+.codrops-icon span {
+	display: none;
+}
+.codrops-icon--drop:before {
+	content: "\e001";
+}
+.codrops-icon--prev:before {
+	content: "\e004";
+}
+
+/* Related demos */
+.content--related {
+	text-align: center;
+	font-weight: 600;
+}
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	margin: 1em 0 0 0;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+.media-item__img {
+	opacity: 0.8;
+	max-width: 100%;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+.media-item__title {
+	font-size: 0.85em;
+	margin: 0;
+	padding: 0.5em;
+}
+@media screen and (max-width:50em) {
+	.codrops-header {
+		padding: 3em 10% 4em;
+	}
+}
+@media screen and (max-width:40em) {
+	.codrops-header h1 {
+		font-size: 2.8em;
+	}
+}
+
+/* Box colors */
+.bg-1 {
+	background: #ECEFF1;
+	color: #37474f;
+}
+
+/* Common button styles */
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	/*margin: 1em;*/
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.section-3 form button {
+    margin-top: 15px;
+}
+
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+	color: #0f056b;
+	border-color: #37474f;
+}
+.bg-2 .button {
+	color: #ECEFF1;
+	border-color: #ECEFF1;
+}
+.bg-3 .button {
+	color: #fff;
+	border-color: #fff;
+}
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+.button--size-m {
+	font-size: 16px;
+}
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--text-thin {
+	font-weight: 300;
+}
+.button--text-medium {
+	font-weight: 500;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+.button--round-s {
+	border-radius: 5px;
+}
+.button--round-m {
+	border-radius: 15px;
+}
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+.button--border-medium {
+	border: 2px solid;
+}
+.button--border-thick {
+	border: 3px solid;
+}
+
+/* Individual button styles */
+
+.block_button{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Ujarak */
+.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0f056b;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+	border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+	background: #7986CB;
+}
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+	color: #fff;
+	border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+	color: #37474F;
+	border-color: #fff;
+}
+.button--ujarak:hover::before {
+	opacity: 0.8;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.button.button--ujarak.button--border-thin.button--text-thick a{
+    color: inherit;
+}
+
+.button.button--ujarak.button--border-thin.button--text-thick a:hover {
+    text-decoration: none;
+}
+
+/********** form predict *******************/
+
+.img-content {
+    position: absolute;
+    text-align: center;
+}
+
+.img-content img {
+    height: 445px;
+    position: relative;
+    left: -100px;
+    top: 115px;
+}
+
+
+
+
+.intro-message{
+    text-align: center;
+}

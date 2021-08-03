@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<title>Estimaison</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+	<div align="middle">
+		<img src="{{url_for('static', filename='img/logo_estimaison.png')}}">
+	</div>
+	
+	<div align="middle">
+
+
+        <br><br>Adresse : {{ address }} <br>
+        Nombre de pièces : {{ rooms }} <br>
+        Nombre de chambres : {{ bedrooms }} <br>
+		Revenu annuel : {{ income }} $<br><br>
+
+		Le prix estimé est de : {{ price }} $
+
+        <br>
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBZih3CFXxvRf_bGZ614lUa9cu5bqy6xkc&q=Mandelieu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+	
+	<footer> 
+		<div align="middle">
+			<br><br>Footer
+		</div>
+	</footer> 
+
+</body>
+</html>

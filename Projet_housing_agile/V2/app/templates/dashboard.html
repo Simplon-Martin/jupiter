@@ -1,0 +1,39 @@
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<div class="intro-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h3>Les Graphiques : </h3>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="box-graphs" align="middle">
+                    <div><img src="{{url_for('static', filename='img/fig_carte.png')}}" alt="dashboard" /></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box-graphs" align="middle">
+                    <div><img src="{{url_for('static', filename='img/fig_income.png')}}" alt="dashboard" /></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box-graphs" align="middle">
+                    <div><img src="{{url_for('static', filename='img/fig_price.png')}}" alt="dashboard" /></div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="box-graphs" align="middle">
+                    <div><img src="{{url_for('static', filename='img/fig_oceanproximity.png')}}" alt="dashboard" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
